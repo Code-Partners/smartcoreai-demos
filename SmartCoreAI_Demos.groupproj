@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E89C4532-48F8-46E7-BEBA-5EDF99C7E184}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CRM\CustomerAI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smartpaste\SmartPasteDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CustomerAI">
+        <MSBuild Projects="CRM\CustomerAI.dproj"/>
+    </Target>
+    <Target Name="CustomerAI:Clean">
+        <MSBuild Projects="CRM\CustomerAI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CustomerAI:Make">
+        <MSBuild Projects="CRM\CustomerAI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SmartPasteDemo">
+        <MSBuild Projects="smartpaste\SmartPasteDemo.dproj"/>
+    </Target>
+    <Target Name="SmartPasteDemo:Clean">
+        <MSBuild Projects="smartpaste\SmartPasteDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SmartPasteDemo:Make">
+        <MSBuild Projects="smartpaste\SmartPasteDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CustomerAI;SmartPasteDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CustomerAI:Clean;SmartPasteDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CustomerAI:Make;SmartPasteDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

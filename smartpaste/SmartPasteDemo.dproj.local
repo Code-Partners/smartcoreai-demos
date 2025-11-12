@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/11/07 14:52:35.000.103,=C:\Users\malco\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/11/07 14:53:47.000.151,C:\Users\malco\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\malco\Documents\public\smartAI demos\smartpaste\fMain.dfm</Transaction>
+    <Transaction>2025/11/07 14:53:47.000.151,C:\Users\malco\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\malco\Documents\public\smartAI demos\smartpaste\fMain.pas</Transaction>
+    <Transaction>2025/11/07 14:54:01.000.204,C:\Users\malco\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\malco\Documents\public\smartAI demos\smartpaste\SmartPasteDemo.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
